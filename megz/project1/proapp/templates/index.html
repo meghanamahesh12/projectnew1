@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"> -->
+
+
+</head>
+
+<body>
+    <div class="container">
+        <h2>LOGIN</h2>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <label for="username">Username</label> <br>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">password</label><br>
+            <input type="password" id="password" name="password" required><br>
+
+            <div class="button">
+                <!-- <a href="{%url 'home' %}"> -->
+                    <button type="submit" value="submit"> Login</button></a>
+            </div>
+            <div class="row">
+                <!-- <a href="#!" class="col">Forgot password?</a> -->
+                <a href="#!" class="col">Not yet login?</a>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
